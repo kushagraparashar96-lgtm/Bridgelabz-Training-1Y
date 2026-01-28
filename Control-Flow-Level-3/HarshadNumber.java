@@ -1,0 +1,19 @@
+import java.util.Scanner;
+class HarshadNumber {
+public static void main(String[] args) {
+Scanner input = new Scanner(System.in);
+System.out.print("Enter an integer: ");
+int number = input.nextInt();
+int sum = 0;
+int temp = number;
+while (temp != 0) {
+sum += temp % 10;
+temp = temp / 10;
+}
+if(number > 0 && number % sum == 0) {
+System.out.println(number + " is a Harshad Number.");
+}else {
+System.out.println(number + " is not a Harshad Number.");
+}
+}
+}
